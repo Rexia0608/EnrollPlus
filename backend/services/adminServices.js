@@ -1,5 +1,8 @@
 import authCodeGenerator from "../utils/AuthCodeGenerator.js";
 import { sendEmail } from "../utils/mailer.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 //++++++++++++++++++ need to refactor +++++++++++++++++++//
 const updateCredentialsServices = (id, data) => {
@@ -289,7 +292,7 @@ const updatePasswordServices = async (passData) => {
       RETURNING email; 
     `;
     let values = [otpExpires, false, passData.id];
-    let message = `http://localhost:5173/password-reset/${passData.id}`;
+    let message = `${process.env.FRONTEND_URL}/password-reset/${passData.id}`;
     await sendEmail("password-reset", passData.email, message);
     return { query, values };
   } catch (error) {

@@ -274,7 +274,6 @@ const evaluationMsg = () => {
           display: inline-block;
         "
       >
-      
         Check Application Status
       </a>
     </div>
