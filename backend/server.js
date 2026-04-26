@@ -67,7 +67,10 @@ app.use(
   "/faculty/get-images",
   express.static("uploads/images", {
     setHeaders: (res) => {
-      res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+      res.setHeader(
+        "Access-Control-Allow-Origin",
+        "https://enrollplus-live-test.netlify.app",
+      );
       res.setHeader("Cross-Origin-Resource-Policy", "cross-origin");
     },
   }),
