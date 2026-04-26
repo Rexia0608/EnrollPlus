@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Lock } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
-
 function Unauthorized() {
   const { user } = useAuth();
 
