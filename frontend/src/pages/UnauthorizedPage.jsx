@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Lock } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
-function Unauthorized() {
+
+function UnauthorizedPage() {
   const { user } = useAuth();
 
   // Fallback logic
@@ -35,4 +36,4 @@ function Unauthorized() {
   );
 }
 
-export default Unauthorized;
+export default UnauthorizedPage;
