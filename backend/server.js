@@ -27,7 +27,7 @@ app.use(
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://enrollplus-live-test.netlify.app",
     methods: ["GET", "POST", "PUT", "OPTIONS", "PATCH", "DELETE"],
     credentials: true,
   }),
