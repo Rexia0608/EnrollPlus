@@ -263,7 +263,7 @@ const evaluationMsg = () => {
 
     <div style="margin: 24px 0; text-align: center;">
       <a
-        href="http://localhost:5173/student/dashboard"
+        href="${process.env.FRONTEND_URL || "http://localhost:5173"}/student/dashboard
         style="
           background-color: #f59e0b;
           color: #ffffff;
@@ -274,6 +274,7 @@ const evaluationMsg = () => {
           display: inline-block;
         "
       >
+      
         Check Application Status
       </a>
     </div>
