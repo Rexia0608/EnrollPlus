@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import Card from "../ui/Card";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../../api.js";
 
 const OfferSection = () => {
   const navigate = useNavigate();
@@ -47,9 +48,7 @@ const OfferSection = () => {
     const fetchCourses = async () => {
       try {
         setLoading(true);
-        const response = await fetch(
-          `http://localhost:3000/student/course-list`,
-        );
+        const response = await fetch(`${API_URL}/student/course-list`);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const data = await response.json();
         setCourses(data);
