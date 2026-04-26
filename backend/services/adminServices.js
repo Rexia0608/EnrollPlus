@@ -292,7 +292,7 @@ const updatePasswordServices = async (passData) => {
       RETURNING email; 
     `;
     let values = [otpExpires, false, passData.id];
-    let message = `${process.env.FRONTEND_URL}/password-reset/${passData.id}`;
+    let message = `${process.env.FRONTEND_URL || "https://enrollplus-live-test.netlify.app"}/password-reset/${passData.id}`;
     await sendEmail("password-reset", passData.email, message);
     return { query, values };
   } catch (error) {
