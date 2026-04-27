@@ -64,9 +64,7 @@ const postVerifiedPayment = async (req, res) => {
     const data = await postVerifiedPaymentModel(req.body);
 
     return globalResponseHandler(res, data, {
-      message: data
-        ? `${req.body.period} payment validated.`
-        : `${req.body.period} payment rejected`,
+      message: data ? `payment validated.` : `payment rejected`,
       statusCode: 200,
     });
   } catch (error) {

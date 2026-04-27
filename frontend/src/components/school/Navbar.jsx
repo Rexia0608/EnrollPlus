@@ -10,7 +10,7 @@ const Navbar = () => {
           <a href="/">
             <div className="flex items-center space-x-2">
               <img
-                src="http://localhost:3000/faculty/get-images/logoTransparent.png"
+                src="https://enrollplus.onrender.com/faculty/get-images/logoTransparent.png"
                 alt="LSTC Logo"
                 className="h-16 w-auto object-contain"
               />
