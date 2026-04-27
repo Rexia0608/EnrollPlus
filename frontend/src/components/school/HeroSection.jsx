@@ -15,7 +15,7 @@ const HeroSection = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(http://localhost:3000/faculty/get-images/schoolPhoto.png)`,
+          backgroundImage: `url(https://enrollplus.onrender.com/faculty/get-images/schoolPhoto.png)`,
         }}
       />
 
