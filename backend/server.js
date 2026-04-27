@@ -25,13 +25,14 @@ app.use(
   }),
 );
 
-app.use(
-  cors({
-    origin: "https://enrollplus-live-test.netlify.app",
-    methods: ["GET", "POST", "PUT", "OPTIONS", "PATCH", "DELETE"],
-    credentials: true,
-  }),
-);
+const corsOptions = {
+  origin: "https://enrollplus-live-test.netlify.app",
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 
 app.use(express.json());
 
